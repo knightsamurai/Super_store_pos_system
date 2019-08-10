@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="allsupplier" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ba5cff71-b1a0-4499-a56c-ce864530baec">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[Select * from  bank]]>
+	</queryString>
+	<field name="bank_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="100" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="cc685eeb-6346-418a-82c7-8f8693126dd5" x="0" y="0" width="555" height="99"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="a42add02-5f52-4b79-adcd-8b80dc01e091" x="19" y="13" width="337" height="48"/>
+				<textElement>
+					<font fontName="Prototype" size="36" isBold="true"/>
+				</textElement>
+				<text><![CDATA[S U P E R    C I T Y]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="362c2120-9e1c-4850-9526-79ff95946526" x="403" y="77" width="146" height="16"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SuperCity@hotmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a4138992-8c9d-4035-8179-74185e7c22ff" x="404" y="45" width="119" height="16"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Colombo 07]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="09f0bbf6-a15f-4a50-addc-e8d865071eed" x="403" y="61" width="119" height="16"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[011-2224445]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bb6f5959-6e0e-4101-982c-2407aba63178" x="404" y="29" width="119" height="16"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[York Street]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="08fe42e2-35e0-4ee9-8d6d-aca143329245" x="403" y="13" width="131" height="16"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUPER CITY (PVT) ltd]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="6b0e8ae5-7c10-4f8c-8f78-aa5483305294" x="19" y="67" width="337" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="0d59146f-dcb9-4122-a51c-d9abed5fee0a" x="19" y="68" width="337" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="449ebff8-b7bd-48e7-8c2c-296cd387c6a3" x="19" y="66" width="337" height="1"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="63" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="8c1fef5f-3703-42cf-9f39-9ef59bea9d6c" x="0" y="14" width="555" height="37"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Engravers MT" size="24" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[ALL Banks  DETAILS]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="5a2af1fb-ceb2-4805-8845-6ea5f3184a32" x="0" y="51" width="555" height="1"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="62" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="81e66f6f-c3a5-4c86-a2b7-05f1fca7d74e" x="206" y="24" width="71" height="35"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1924e7fc-d4ec-45d7-9940-6ed17ceefaff" x="277" y="24" width="277" height="35"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="42a0ebdc-6189-4b81-9289-83bc0fff13c0" x="0" y="23" width="555" height="1"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<line>
+				<reportElement uuid="38ee479e-5291-4a25-8c91-a16e9f1aedb3" x="0" y="20" width="555" height="1"/>
+			</line>
+			<textField>
+				<reportElement uuid="a503fe32-60fb-4feb-aeb8-537cf7b37824" x="206" y="0" width="71" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{bank_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ada99bab-f687-4005-adec-1697a625d65f" x="277" y="0" width="277" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Name}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="59db0c45-8ea7-4bfe-a838-ba05d4832148" x="-1" y="-3" width="555" height="1"/>
+			</line>
+		</band>
+	</detail>
+</jasperReport>

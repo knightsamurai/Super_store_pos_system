@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="invoice_subreport1" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="23c22659-3663-45e7-8608-4b8a0933aee3">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="ido" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     item.`item_id` AS item_item_id,
+     item.`name` AS item_name,
+     item.`add_date` AS item_add_date,
+     item.`unit_price` AS item_unit_price,
+     item.`status` AS item_status,
+     item.`sale_price` AS item_sale_price,
+     item.`brand_brand_id` AS item_brand_brand_id,
+     item.`badge_badge_number` AS item_badge_badge_number,
+     invoice_has_item.`invoice_inv_id` AS invoice_has_item_invoice_inv_id,
+     invoice_has_item.`item_item_id` AS invoice_has_item_item_item_id,
+     invoice_has_item.`qty` AS invoice_has_item_qty,
+     invoice_has_item.`total` AS invoice_has_item_total,
+     invoice_has_item.`disc` AS invoice_has_item_disc,
+     invoice_has_item.`disc_value` AS invoice_has_item_disc_value,
+     invoice_has_item.`sub_tot` AS invoice_has_item_sub_tot,
+     invoice.`inv_id` AS invoice_inv_id,
+     invoice.`date` AS invoice_date,
+     invoice.`time` AS invoice_time,
+     invoice.`subtot` AS invoice_subtot,
+     invoice.`discount` AS invoice_discount,
+     invoice.`dis_value` AS invoice_dis_value,
+     invoice.`nettot` AS invoice_nettot,
+     invoice.`emp_emp_id` AS invoice_emp_emp_id,
+     invoice.`customer_cus_id` AS invoice_customer_cus_id
+FROM
+     `item` item INNER JOIN `invoice_has_item` invoice_has_item ON item.`item_id` = invoice_has_item.`item_item_id`
+     INNER JOIN `invoice` invoice ON invoice_has_item.`invoice_inv_id` = invoice.`inv_id`
+where inv_id=$P{ido}]]>
+	</queryString>
+	<field name="item_item_id" class="java.lang.String"/>
+	<field name="item_name" class="java.lang.String"/>
+	<field name="item_add_date" class="java.sql.Date"/>
+	<field name="item_unit_price" class="java.lang.Double"/>
+	<field name="item_status" class="java.lang.String"/>
+	<field name="item_sale_price" class="java.lang.Double"/>
+	<field name="item_brand_brand_id" class="java.lang.String"/>
+	<field name="item_badge_badge_number" class="java.lang.String"/>
+	<field name="invoice_has_item_invoice_inv_id" class="java.lang.String"/>
+	<field name="invoice_has_item_item_item_id" class="java.lang.String"/>
+	<field name="invoice_has_item_qty" class="java.lang.Double"/>
+	<field name="invoice_has_item_total" class="java.lang.Double"/>
+	<field name="invoice_has_item_disc" class="java.lang.Double"/>
+	<field name="invoice_has_item_disc_value" class="java.lang.Double"/>
+	<field name="invoice_has_item_sub_tot" class="java.lang.Double"/>
+	<field name="invoice_inv_id" class="java.lang.String"/>
+	<field name="invoice_date" class="java.sql.Date"/>
+	<field name="invoice_time" class="java.sql.Time"/>
+	<field name="invoice_subtot" class="java.lang.Double"/>
+	<field name="invoice_discount" class="java.lang.Double"/>
+	<field name="invoice_dis_value" class="java.lang.Double"/>
+	<field name="invoice_nettot" class="java.lang.Double"/>
+	<field name="invoice_emp_emp_id" class="java.lang.String"/>
+	<field name="invoice_customer_cus_id" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="f5f221b1-517c-41dc-836c-93464b640cac" x="0" y="11" width="33" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Item]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="62321c62-df65-4b89-b6b4-18bfc3cf0c23" x="33" y="11" width="32" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4e15028f-6c25-4c13-a740-43504163b2fe" x="65" y="11" width="28" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3f0c3f46-1a06-4fef-ac8e-17c220320200" x="93" y="11" width="35" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Disc]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="62dc752e-df5d-4a06-aadb-8a11b47095e5" x="128" y="11" width="33" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="c69eef94-0f74-4646-88ca-5c43b18602c4" x="0" y="6" width="161" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="083a37ea-971d-4cdd-8ba7-3464de8963e3" x="0" y="32" width="161" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="872fbcc3-0c46-48e6-8d40-0dd8d008572e" x="0" y="33" width="161" height="1"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<textField>
+				<reportElement uuid="4e4a43a6-48c8-4cd3-9244-fac65fd3cfd3" x="0" y="0" width="33" height="16"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{item_item_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f908f55d-04f4-4ccd-9681-53a69475074a" x="0" y="16" width="33" height="16"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{item_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4f3e44eb-d414-4697-b230-92c51d12dce1" x="33" y="16" width="32" height="16"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{item_sale_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8284869b-ad7e-420e-974d-3c8b0c218699" x="65" y="16" width="28" height="16"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoice_has_item_qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="28a8ee40-5db7-4682-bb56-754516841de9" x="93" y="16" width="35" height="16"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoice_has_item_disc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="594d06a2-7c5c-4707-b532-003aedddb34b" x="128" y="16" width="33" height="16"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoice_has_item_sub_tot}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="77" splitType="Stretch">
+			<line>
+				<reportElement uuid="2054ce3c-a50f-4564-8667-10d96692fb59" x="2" y="2" width="159" height="1"/>
+			</line>
+			<textField>
+				<reportElement uuid="52e9fa02-8630-4512-b19e-c1054492ba18" x="93" y="3" width="68" height="18"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoice_subtot}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="65ebbbab-c2a1-46e7-956c-bfc5de72730b" x="93" y="21" width="68" height="18"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoice_discount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="04fb1f66-49f6-49c6-b55c-b1157a976fa1" x="93" y="39" width="68" height="18"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoice_dis_value}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c580fd60-7825-4710-96fc-a672baef82b7" x="93" y="57" width="68" height="18"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoice_nettot}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="90fc0206-3832-47fe-a7f8-beb14b77b191" x="33" y="3" width="60" height="18"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sub Total :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="37f3e6a4-a14d-48b7-b097-030af3af4c9d" x="33" y="21" width="60" height="18"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Discount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d5f71136-9543-4780-b9ac-ae2a376e0fe7" x="33" y="39" width="60" height="18"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Disc Value]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c1752ae7-2330-4306-a896-3873a6290a09" x="33" y="57" width="60" height="18"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Net Total]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="a6c882a4-924d-4ab1-bb40-b041d465860c" x="33" y="56" width="128" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="c29bad09-e5f5-4f1b-a029-14394a29420b" x="33" y="74" width="128" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="4443eee4-4bb5-41b2-9239-374de1b76d17" x="33" y="76" width="128" height="1"/>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="52" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="5b7c4266-ecb6-4758-aefd-b4bfdccf939e" x="0" y="6" width="162" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Have a nice day......]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="12732f28-2ea6-4943-b9d7-c78a7e12d6af" x="1" y="26" width="161" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Come again]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="93ecdcd0-aa77-4ca9-b49e-7ede24ee3ec3" x="2" y="46" width="159" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="d2e204dd-c28c-4f4a-9214-46af96ce2684" x="0" y="47" width="159" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="bcd7c53a-5302-40ce-8ea7-0d091ca3f4b2" x="2" y="48" width="159" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="bee56db0-caf3-4e3c-a933-541e1a91136e" x="0" y="5" width="159" height="1"/>
+			</line>
+		</band>
+	</pageFooter>
+</jasperReport>

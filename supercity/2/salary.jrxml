@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="salary" language="groovy" pageWidth="595" pageHeight="500" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isIgnorePagination="true" uuid="7519cf53-f512-4bb7-9d82-7d7e6ed958f5">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id" class="java.lang.String"/>
+	<parameter name="sbsl" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select a.*,b.* from(salary a inner join emp b on a.emp_emp_id=b.emp_id)where ym=$P{id}]]>
+	</queryString>
+	<field name="date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="epf" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="etf" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nope" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nettot" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="emp_emp_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="login_emp_emp_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="advance" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ym" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="emp_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dob" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nic" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gender" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bank_account" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="post" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bank_bank_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="223" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="05d7f392-aca9-450d-96f7-97149b8a7591" x="6" y="9" width="545" height="206"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="e013584b-dde1-467d-b448-4778ddbc4dda" x="12" y="10" width="397" height="52"/>
+				<textElement>
+					<font fontName="Prototype" size="44"/>
+				</textElement>
+				<text><![CDATA[S U P E R   C I T Y]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="262e1fbd-3cf0-4ba8-9817-ee0f74e1de16" x="6" y="8" width="545" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="19f75dd6-5981-479a-8e18-c74fc6535ea9" x="43" y="102" width="122" height="20"/>
+				<textElement>
+					<font fontName="Bookman Old Style" size="14"/>
+				</textElement>
+				<text><![CDATA[Salary Sheet For]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="afa61b7c-a130-40c6-b521-154397a30813" x="178" y="102" width="112" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{emp_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9e071bb4-a38e-4cfb-808e-7ea0ef29d1f6" x="178" y="122" width="112" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{fname}+" "+$F{lname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4e0cecd0-adcc-4e1f-ba70-1e608899f784" x="178" y="142" width="112" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nic}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="800d57ad-b4ee-4448-a3a9-66ab41c4ac18" x="13" y="62" width="76" height="20"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Salary for]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="0b274ecd-da56-4117-8645-36e485b7b7ca" x="89" y="62" width="100" height="20"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ym}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="bbc3bbb2-27c0-4e32-829b-def5696dc795" x="449" y="102" width="91" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sbsl}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="6b744864-c8a4-4e9f-9a7f-a2a83a821770" x="381" y="122" width="68" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Epf]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="86b7e235-2023-46c0-b56a-fe17419d5988" x="449" y="122" width="91" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{epf}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="6bd1a183-7581-4d2d-ac87-e695b895f95d" x="381" y="142" width="68" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Etf]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="b17da2d3-f7ac-4064-84fb-14f1f12ddf41" x="449" y="142" width="91" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{etf}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="fee1d263-fee0-4dc4-b734-baa170afbc11" x="381" y="162" width="68" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Nope]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="e9fa3ad7-e8a7-41a9-96d0-52b4ff8915ac" x="449" y="162" width="91" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nope}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="49ea5912-d591-4415-81e0-d4918c6d216a" x="381" y="182" width="68" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Net salary]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="c29bd625-8bc7-490b-b874-a87c0e489b60" x="449" y="182" width="91" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nettot}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="28d6123c-41ba-494b-b9d2-993b901d3f79" x="381" y="102" width="68" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Sub salary]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="25230574-d5d1-4c1e-abf7-a048c50e2d04" x="12" y="82" width="528" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="626e5457-966f-45db-9418-c6a3ef7dbe91" x="381" y="181" width="159" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="413df929-1d5a-4beb-b990-96989d4725c3" x="381" y="182" width="159" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="e354af8d-3628-4593-8165-2ccdaca79e29" x="381" y="201" width="159" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="8338eb07-27a0-4762-a26f-2853b0a2ec85" x="381" y="200" width="159" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="1a20ce02-5285-47b0-aec2-8aeec86e01b8" x="381" y="203" width="159" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="2c8a4ee1-fe2e-47df-8f60-be86ca7f50e3" x="413" y="18" width="119" height="16"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUPER CITY (PVT) ltd]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="16df777a-1b1a-40fc-816f-e35ef6550bcf" x="413" y="34" width="119" height="16"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[York Street]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4cf76cfa-5d71-4bfc-91ce-e4029fe47bdd" x="413" y="50" width="119" height="16"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Colombo 07]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="8828d97e-da0b-4c70-b0dc-631cd68e94d2" x="178" y="161" width="112" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{bank_account}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="108d5871-d54a-455b-a042-a2cb258152bf" x="6" y="195" width="375" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[YOU ARE RETAIN THIS STATEMENT FOR AT LEAST 6 MONTH]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="bfe276b5-a044-4581-9d89-7965a87dbb8b" x="35" y="211" width="317" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="5acfa0e1-880f-4fd6-b949-f399c3637e88" x="35" y="194" width="317" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="05b9bf75-087b-428f-a912-34edc9e096e9" x="413" y="66" width="119" height="16"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[011-2224445]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

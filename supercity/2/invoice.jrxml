@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="invoice" language="groovy" pageWidth="200" pageHeight="842" columnWidth="160" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isIgnorePagination="true" uuid="965e1444-1b60-4e97-9496-63bce89039cd">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\ProgramData\\supercity\\2\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select a.*,b.* from(invoice a inner join emp b on a.emp_emp_id=b.emp_id) where inv_id=$P{id}
+]]>
+	</queryString>
+	<field name="inv_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="time" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="subtot" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="discount" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dis_value" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nettot" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="emp_emp_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="customer_cus_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="emp_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dob" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nic" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gender" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bank_account" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="post" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bank_bank_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="118" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="8d1d0c8f-1574-4186-87d6-037fec991675" x="1" y="2" width="159" height="114"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="84ab3dec-77ce-4d54-be2e-5e4c97e45834" x="0" y="1" width="160" height="33"/>
+				<textElement textAlignment="Center">
+					<font fontName="Prototype" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[I N V O I C E]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="d8eb736d-56c9-4932-b301-a4b8af105cce" x="0" y="1" width="160" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="c3c4ee01-afeb-463b-9c88-eb528a70ae46" x="0" y="34" width="160" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="3a4484fe-a6b3-49b2-bd2e-8394872899f3" x="0" y="33" width="160" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="2b5be2e4-316f-4491-87df-674217b13a28" x="1" y="52" width="159" height="16"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[York Street]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="840e5b9a-4cfe-4ba6-9b08-b399a15ceb21" x="0" y="100" width="160" height="16"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[SuerCity@hotmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="dde14388-958a-4051-96a9-55d92da058db" x="0" y="84" width="160" height="16"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[011-2224445]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="21a75dab-9e16-4fc8-bf68-3bff70a1c17e" x="1" y="36" width="159" height="16"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUPER CITY (PVT) ltd]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f29cf19e-4b4e-4570-83cb-8c93a82d57d1" x="1" y="68" width="159" height="16"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Colombo 07]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="43" splitType="Stretch">
+			<textField>
+				<reportElement uuid="969aef00-ec8c-4482-944d-f9b86a0ac6c8" x="40" y="10" width="46" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{inv_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b58d3aaf-cd10-469c-8cb7-7a3813491d80" x="110" y="10" width="50" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date}.toGMTString()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="6f35b9ce-8db0-494f-b7ed-5859638870da" x="110" y="23" width="50" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.SimpleDateFormat("hh:mm:ss").format($F{time})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2b610454-4cb9-458a-acc7-c544539927b4" x="40" y="23" width="46" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fname}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="18865c92-67f5-4edc-a54f-d479977c3e42" x="1" y="39" width="159" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="3e5edc93-ca32-4e6e-b3f7-efbc0d8f88e7" x="90" y="11" width="28" height="13"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0e1d688c-4657-48e9-8f6a-4474856ac9e5" x="90" y="24" width="28" height="13"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Time :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="96d894a7-424c-44c3-ba6e-e2da4680cb29" x="0" y="10" width="46" height="13"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[invoice id:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c7fe4533-a8df-4bd1-b98e-de8a4dfa92ec" x="1" y="23" width="39" height="13"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cashier :]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="42" splitType="Stretch">
+			<subreport>
+				<reportElement uuid="684b7d85-5b5c-413c-b880-4d2888af1222" x="0" y="0" width="160" height="42"/>
+				<subreportParameter name="ido">
+					<subreportParameterExpression><![CDATA[$F{inv_id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "invoice_subreport1.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+</jasperReport>

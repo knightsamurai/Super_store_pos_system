@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="grn" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isIgnorePagination="true" uuid="c94cc0e2-d2d7-4553-b7f8-4f7b8cdff9ba">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\ProgramData\\supercity\\2\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="id" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from grn where grn_id=$P{id}]]>
+	</queryString>
+	<field name="grn_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="date" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="discount" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dis_value" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="net_tot" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="supplier_sup_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="emp_emp_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="99" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="3023f111-cfe4-41a7-8d7f-3c8124ca5ea9" x="0" y="0" width="555" height="99"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="ad92097c-0fbf-4d8b-865f-6b4366dd5f45" x="19" y="13" width="337" height="48"/>
+				<textElement>
+					<font fontName="Prototype" size="36" isBold="true"/>
+				</textElement>
+				<text><![CDATA[S U P E R    C I T Y]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e5189a3b-bff4-4b18-b12d-690015ae1765" x="404" y="13" width="131" height="16"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUPER CITY (PVT) ltd]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="03f48776-090d-4b97-a1a6-ffb2a07e6c6f" x="404" y="45" width="119" height="16"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Colombo 07]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c096501f-cf27-40e9-8747-a42611e315fc" x="404" y="29" width="119" height="16"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[York Street]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="58ec73df-4c0f-4896-9c4e-14a1a1c3f07e" x="403" y="61" width="119" height="16"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[011-2224445]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="0d25aac1-f132-4371-9947-84acf29c7d16" x="19" y="61" width="337" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="3edb6678-fd19-4eb1-81a3-72785712602b" x="19" y="62" width="337" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="d69512ce-0008-463a-a328-ff9e4b3b4541" x="19" y="63" width="337" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="b1c2e664-2957-45ce-a899-68e99e7f8cb0" x="403" y="77" width="144" height="16"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SuperCity@hotmail.com]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="58" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="f904116f-418b-4259-b71a-a7c91beb04aa" x="384" y="4" width="171" height="48"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="9b4d41b8-7c5b-46a2-9895-0a27d0a7ce59" x="19" y="0" width="135" height="51"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="36" isBold="true"/>
+				</textElement>
+				<text><![CDATA[G R N]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="f0fb5426-640b-485c-8a67-810815820a5a" x="0" y="55" width="555" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="41a8b9aa-6879-4e55-bf02-6835933a383b" x="384" y="51" width="163" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="64c956df-fe68-4159-9386-b87d5eff7403" x="404" y="8" width="60" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[G r n   I D :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6dfe195e-40aa-444f-a693-8c07a90c9b9c" x="404" y="28" width="60" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[D a t e :]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="1f488db3-2c49-49b2-aaa1-227e49c11210" x="464" y="8" width="77" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{grn_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0beba2f1-9545-4507-9036-3c87f6e69ea5" x="464" y="28" width="77" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="39" splitType="Stretch">
+			<subreport>
+				<reportElement uuid="9c365393-6fb0-455b-b21f-863d95175730" x="0" y="4" width="555" height="35"/>
+				<subreportParameter name="ido">
+					<subreportParameterExpression><![CDATA[$F{grn_id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "grn_subreport1.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="50"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="50"/>
+	</pageFooter>
+	<summary>
+		<band height="98">
+			<staticText>
+				<reportElement uuid="d7af029a-8875-44a8-b280-c1fe3dff6b33" x="0" y="4" width="100" height="20"/>
+				<textElement>
+					<font fontName="Calibri Light" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Athorised Signature :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d86d7255-4bd5-436b-b055-0541b10e64eb" x="0" y="24" width="133" height="20"/>
+				<textElement>
+					<font fontName="Calibri Light"/>
+				</textElement>
+				<text><![CDATA[(Super  City)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8e1592e5-bb88-49a4-a514-e91400d1a03d" x="416" y="69" width="125" height="20"/>
+				<textElement>
+					<font fontName="Calibri Light" size="12"/>
+				</textElement>
+				<text><![CDATA[Issued By]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="12ac4ba5-332d-49ab-9570-cefd191e1f73" x="211" y="69" width="133" height="20"/>
+				<textElement>
+					<font fontName="Calibri Light" size="12"/>
+				</textElement>
+				<text><![CDATA[Checked By]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="b8600445-fca3-490d-be74-895a32c015b8" x="-2" y="94" width="549" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="99b75129-1cdc-4c79-9561-2fd3ba9f94d0" x="0" y="67" width="125" height="20"/>
+				<textElement>
+					<font fontName="Calibri Light" size="12"/>
+				</textElement>
+				<text><![CDATA[Printed By ]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="b0a32cd5-6811-421d-9af0-80591d688cb6" x="0" y="66" width="125" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="744cb36e-3cdd-4bf6-877e-5e5dc89e4fc7" x="211" y="65" width="125" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="6ef228f6-5fd0-4925-86b4-bba73c58fdd8" x="415" y="67" width="125" height="1"/>
+			</line>
+		</band>
+	</summary>
+</jasperReport>
